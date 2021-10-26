@@ -1,10 +1,11 @@
 import "./App.css";
-import { Profile } from "./components";
+import Profile from "./components/Profile";
+
 function App() {
   return (
-    <>
-      <div>Hello World!!!</div>
-    </>
+    <div className="user">
+      <Profile />
+    </div>
   );
 }
 
