@@ -1,35 +1,39 @@
-import "./Profile.css"
+import "./Profile.css";
 
-const Profile = () => {
+// console.log(data);
+// {user: {name, tag}} Двойная девтрктуризация
+export const Profile = ({user}) => {
+    const { avatar, name, location, tag, stats} = user;
+    console.log(avatar);
     return (
-        <div class="profile">
-            <div class="description">
+        <div className="profile">
+            <div className="description">
                 <img
-                src="https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg"
+                src={""}
                 alt="Аватар пользователя"
-                class="avatar"
+                className="avatar"
                 />
-                <p class="name">Petra Marica</p>
-                <p class="tag">@pmarica</p>
-                <p class="location">Salvador, Brasil</p>
+                <p className="name">{ name }</p>
+                <p className="tag">@{tag}</p>
+                <p className="location">{ location}</p>
             </div>
 
-            <ul class="stats">
+            <ul className="stats">
                 <li>
-                <span class="label">Followers</span>
-                <span class="quantity">1000</span>
+                <span className="label">Followers</span>
+                <span className="quantity">{stats.followers}</span>
                 </li>
                 <li>
-                <span class="label">Views</span>
-                <span class="quantity">2000</span>
+                <span className="label">Views</span>
+                    <span className="quantity">{ stats.views}</span>
                 </li>
                 <li>
-                <span class="label">Likes</span>
-                <span class="quantity">3000</span>
+                <span className="label">Likes</span>
+                <span className="quantity">{stats.likes}</span>
                 </li>
             </ul>
         </div>
     )
 }
 
-export default Profile;
+// export default Profile;
