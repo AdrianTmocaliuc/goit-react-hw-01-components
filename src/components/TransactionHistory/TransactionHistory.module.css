@@ -24,9 +24,3 @@
 .transactionItem:nth-child(2n + 1) {
   background-color: #fff;
 }
-/* .transactionHistory td {
-  background-color: #fff;
-} */
-/* .transactionHistory tr:nth-child(2n) {
-  background-color: rgb(179, 174, 174);
-} */

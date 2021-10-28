@@ -30,7 +30,7 @@ export const Profile = ({ user }) => {
     </div>
   );
 };
-// export default Profile;
+
 Profile.propTypes = {
   user: PropTypes.shape({
     avatar: PropTypes.string.isRequired,

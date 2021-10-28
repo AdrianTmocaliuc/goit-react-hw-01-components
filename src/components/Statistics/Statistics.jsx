@@ -23,7 +23,6 @@ export const Statistics = ({ stats }) => {
     </section>
   );
 };
-// export default Statistics;
 
 Statistics.propTypes = {
   stats: PropTypes.arrayOf(

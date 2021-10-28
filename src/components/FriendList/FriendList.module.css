@@ -1,4 +1,7 @@
 .friendList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 50px;
 }
 .isOnline {
@@ -14,7 +17,6 @@
   height: 10px;
   border-radius: 50%;
   margin: auto 10px;
-  /* background-color: green; */
 }
 
 .item {
