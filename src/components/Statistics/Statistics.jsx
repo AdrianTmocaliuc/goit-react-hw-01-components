@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import s from "./Statistics.module.css";
 import { getRandomHexColor } from "../../functions/randomColor";
 
-export const Statistics = ({ statistic }) => {
+export const Statistics = ({ stats }) => {
   return (
     <section className={s.statistics}>
       <h2 className={s.title}>Upload stats</h2>
 
       <ul className={s.list}>
-        {statistic.map(({ id, label, percentage }) => (
+        {stats.map(({ id, label, percentage }) => (
           <li
             className={s.item}
             key={id}
@@ -26,7 +26,7 @@ export const Statistics = ({ statistic }) => {
 // export default Statistics;
 
 Statistics.propTypes = {
-  statistic: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,

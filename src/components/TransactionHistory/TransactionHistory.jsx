@@ -4,7 +4,7 @@ import s from "./TransactionHistory.module.css";
 
 import { Transiction } from "./TransactionHistoryList/TransactionHistoryLis.jsx";
 
-export const TransactionHistory = ({ transactions }) => {
+export const TransactionHistory = ({ items }) => {
   return (
     <table className={s.transactionHistory}>
       <thead>
@@ -16,8 +16,8 @@ export const TransactionHistory = ({ transactions }) => {
       </thead>
 
       <tbody>
-        {transactions.map(({ id, ...transactions }) => (
-          <Transiction key={id} {...transactions} />
+        {items.map(({ id, ...items }) => (
+          <Transiction key={id} {...items} />
         ))}
       </tbody>
     </table>
@@ -25,7 +25,7 @@ export const TransactionHistory = ({ transactions }) => {
 };
 
 TransactionHistory.propTypes = {
-  transactions: arrayOf(
+  items: arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,

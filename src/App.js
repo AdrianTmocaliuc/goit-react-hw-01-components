@@ -14,9 +14,9 @@ function App() {
   return (
     <>
       <Profile user={user} />
-      <Statistics statistic={statisticalData} />
+      <Statistics stats={statisticalData} />
       <FriendList friends={friends} />
-      <TransactionHistory transactions={transactions} />
+      <TransactionHistory items={transactions} />
     </>
   );
 }
