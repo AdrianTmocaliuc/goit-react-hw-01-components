@@ -1,30 +1,25 @@
-import "./Statistics.css"
+import s from "./Statistics.module.css"
+import { getRandomHexColor } from "../../functions/randomColor";
 
-export const Statistics = ({ statisticalData }) => {
-    console.log(statisticalData)
-    // const statisticElem = statisticalData.map(())
-    return<section className="statistics">
-            <h2 className="title">Upload stats</h2>
 
-            <ul className="stat-list">
-                <li className="item">
-                <span className="label">.docx</span>
-                <span className="percentage">4%</span>
-                </li>
-                <li className="item">
-                <span className="label">.mp3</span>
-                <span className="percentage">14%</span>
-                </li>
-                <li className="item">
-                <span className="label">.pdf</span>
-                <span className="percentage">41%</span>
-                </li>
-                <li className="item">
-                <span className="label">.mp4</span>
-                <span className="percentage">12%</span>
-                </li>
+export const Statistics = ({statistic}) => {
+    return (
+        <section className={s.statistics}>
+            <h2 className={s.title}>Upload stats</h2>
+
+            <ul className={s.list}>
+                {statistic.map(({ id, label, percentage }) => (
+                    <li className={s.item} key={id}
+                        style={{backgroundColor: getRandomHexColor()}}
+                    >
+                        <span className={s.label}>{ label }</span>
+                        <span className={s.percentage}>{ percentage }%</span>
+                    </li>
+                ))}
+           
             </ul>
         </section>
+    )
 }
 
 // export default Statistics;
