@@ -2,7 +2,7 @@ import PropTypes, { arrayOf } from "prop-types";
 
 import s from "./TransactionHistory.module.css";
 
-import { Transiction } from "./TransactionHistoryList/TransactionHistoryLis.jsx";
+import { TransictionItem } from "./TransactionHistoryList/TransactionHistoryLis.jsx";
 
 export const TransactionHistory = ({ items }) => {
   return (
@@ -17,7 +17,7 @@ export const TransactionHistory = ({ items }) => {
 
       <tbody>
         {items.map(({ id, ...items }) => (
-          <Transiction key={id} {...items} />
+          <TransictionItem key={id} {...items} />
         ))}
       </tbody>
     </table>
@@ -28,9 +28,6 @@ TransactionHistory.propTypes = {
   items: arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      amount: PropTypes.string.isRequired,
-      currency: PropTypes.string.isRequired,
     })
   ),
 };

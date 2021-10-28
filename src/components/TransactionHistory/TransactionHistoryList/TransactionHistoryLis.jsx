@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+
 import s from "../TransactionHistory.module.css";
 
-export const Transiction = ({ type, amount, currency }) => {
+export const TransictionItem = ({ type, amount, currency }) => {
   return (
     <tr className={s.transactionItem}>
       <td className={s.type}>{type}</td>
@@ -8,4 +10,10 @@ export const Transiction = ({ type, amount, currency }) => {
       <td>{currency}</td>
     </tr>
   );
+};
+
+TransictionItem.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };
