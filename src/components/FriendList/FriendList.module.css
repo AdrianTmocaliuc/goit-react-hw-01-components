@@ -1,3 +1,6 @@
+.friendList {
+  margin-bottom: 50px;
+}
 .isOnline {
   background-color: green;
 }
@@ -10,5 +13,26 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  margin: auto 10px;
   /* background-color: green; */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 250px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0px 3px 3px 2px #000000;
+}
+.avatar {
+  background-color: rgb(129, 109, 78);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.name {
+  margin-left: 10px;
+  font-weight: 500;
 }

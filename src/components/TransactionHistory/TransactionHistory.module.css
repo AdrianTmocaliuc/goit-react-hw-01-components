@@ -1,7 +1,32 @@
 .type {
   text-transform: capitalize;
+  text-align: left;
+  padding-left: 15%;
 }
 
 .transactionHistory {
   margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  box-shadow: 0px 2px 5px 2px #494949;
 }
+
+.transactionHistory th {
+  background-color: rgb(89, 89, 228);
+}
+
+.transactionItem:nth-child(2n) {
+  background-color: rgb(179, 174, 174);
+}
+.transactionItem:nth-child(2n + 1) {
+  background-color: #fff;
+}
+/* .transactionHistory td {
+  background-color: #fff;
+} */
+/* .transactionHistory tr:nth-child(2n) {
+  background-color: rgb(179, 174, 174);
+} */
