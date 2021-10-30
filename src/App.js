@@ -6,7 +6,7 @@ import {
   FriendList,
   TransactionHistory,
 } from "./components/";
-// import Dkjfhalhdf from "./components";
+import Dkjfhalhdf from "./components";
 import user from "./data/user.json";
 import statisticalData from "./data/statistical-data.json";
 import friends from "./data/friends.json";
