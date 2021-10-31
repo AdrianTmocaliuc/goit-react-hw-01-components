@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
+//start Virtual-DOM
 ReactDOM.render(
   <React.StrictMode>
     <App />
